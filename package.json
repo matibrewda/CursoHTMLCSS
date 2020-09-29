@@ -1,0 +1,16 @@
+{
+  "name": "cursofullstack",
+  "version": "1.0.0",
+  "description": "primer proyecto de nodeJS",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://matibrewda@bitbucket.org/matibrewda/cursofullstack.git"
+  },
+  "author": "Matias Brewda",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/matibrewda/cursofullstack#readme"
+}

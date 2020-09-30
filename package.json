@@ -4,7 +4,8 @@
   "description": "primer proyecto de nodeJS",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+	"dev":"lite-server",
+	"test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -12,5 +13,8 @@
   },
   "author": "Matias Brewda",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/matibrewda/cursofullstack#readme"
-}
+  "homepage": "https://bitbucket.org/matibrewda/cursofullstack#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+	

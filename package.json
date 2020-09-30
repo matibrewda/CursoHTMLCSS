@@ -1,10 +1,10 @@
-{
+		{
   "name": "cursofullstack",
   "version": "1.0.0",
   "description": "primer proyecto de nodeJS",
   "main": "index.html",
   "scripts": {
-	"dev":"lite-server",
+	"dev": "lite-server",
 	"test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,6 +15,6 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/matibrewda/cursofullstack#readme",
   "devDependencies": {
-    "lite-server": "^2.5.4"
+  "lite-server": "^2.5.4"
   }
-	
+}

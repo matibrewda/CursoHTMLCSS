@@ -12,11 +12,12 @@ footer{
     
 }
 .card-hotel{
-    flex: 1 150px;
+    flex: 1 200px;
     padding: 2px 5px 2px 5px;
 }
 .btn-reserva{
-    width: 100%;   
+    width: 100%;
+    border: 0px;   
 }
 .footer-address-icon {
    padding-right: 10px; 

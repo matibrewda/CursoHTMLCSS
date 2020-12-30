@@ -36,20 +36,31 @@
       <li class="breadcrumb-item active"><a href="index.html" aria-current="page">Home</a></li>
     </ol>
   </nav>
+  <div class="row"> 
+    <div class="col-sm-4">
+      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#funciona" aria-expanded="false" aria-controls="multicollapse1">Como Funciona?</button>
+    </div>
+    <div class="col-sm-4">
+      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#reserva" aria-expanded="false" aria-controls="multicollapse2">Donde puedo reservar?</button>
+    </div>
+    <div class="col-sm-4">
+      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#pago" aria-expanded="false" aria-controls="multicollapse2">Como Pago?</button>
+    </div>
+  </div>
      <div class="row">
-       <div class="col-sm-4">
+       <div class="col-sm-4 collapse multi-collapse" id="funciona">
          <p>
            <h3> Como funciona?</h3>
          <p>Busca los hoteles de acuerdo a tus preferencias</p>
          </p>
        </div>
-       <div class="col-sm-4">
+       <div class="col-sm-4 collapse multi-collapse" id="reserva">
         <p>
           <h3>Donde puedo reservar?</h3>
         <p>Elegi la ciudad que te interes y luego realiza la reserva con tus datos</p>
         </p>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-4 collapse multi-collapse" id="pago">
         <p>
           <h3> Como pago?</h3>
         <p>Utiliza tu tarjeta favorita</p>
@@ -57,12 +68,33 @@
       </div>
   </div>
   <hr>
+  <div id="carouselControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item-active">
+        <img class="d-block w-100" src="images/Hotel1.jpg" alt="Primer slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="images/Hotel2.jpg" alt="Segundo slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="images/Hotel3.jpg" alt="Tercer slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Siguiente</span>
+    </a>
+  </div>
   <div class="d-flex flex-wrap flex-row-reverse ">
     <div class="card card-hotel d-flex flex-column justify-content-between ml-2">
       <img class="card-img-top" src="images/descarga.jpg" alt="hotel img"></img>
     <div class="card-body">
       
-      <h5 class="card-title"> Hotel </h5>
+      <h5 class="card-title" data-toggle="tooltip" data-placement="top" title="Este hotel tiene desayuno incluido"> Hotel </h5>
       <h6 class="card-subtitle text-muted"> Hotel uno </h6>
       <p class="card-text">Hotel es un m  oderno y elegante hotel de 4 estrellas, asomado al mar, ideal para unas vacaciones románticas y de gran encanto</p>
     
@@ -138,10 +170,38 @@
           
           </div>
           
-           <div> <button class="btn btn-primary btn-reserva"><span class="oi oi-plus"></span> Reservar </button> </div>
+           <div> <button class="btn btn-primary btn-outline-succes" data-toggle="modal" data-target="#contacto">Contacto</button> </div>
           </div>
     </div>
   </div>
+<!-- NO SE PORQUE NO FUNCIONAN LOS MODALS NI LOS TOOLTIPS
+    <div class="modal-fade" id="contacto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="model-header">
+            <h5 class="modal-title" id="exampleModalLabel">Contacto con el hotel</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Mensaje:</label>
+                <textarea class="form-control" id="messaje-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-succes">Enviar</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  -->
+</div>
 <footer>
 <div class="row">
   <div class="col-sm-4 d-flex flex-column">
@@ -172,10 +232,19 @@
   
 
   
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+    <script>
+      $(function(){
+      $("[data-toggle='tooltip']").tooltip();
+      $('.carousel').carousel({
+        interval :100
+      });
+    });
+    </script>
+
   </body>
 </html>
